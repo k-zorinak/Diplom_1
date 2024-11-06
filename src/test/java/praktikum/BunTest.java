@@ -7,8 +7,9 @@ import static org.junit.Assert.assertEquals;
 
 
 public class BunTest {
-    private final String TEST_NAME = "хлебушек";
-    private final float TEST_PRICE = 10.5f;
+    private static final String TEST_NAME = "хлебушек";
+    private static final float TEST_PRICE = 10.5f;
+    private static final int ZERO = 0;
     private Bun bun;
 
     @Before
@@ -25,7 +26,7 @@ public class BunTest {
     @Test
     public void getPriceReturnsCorrectValue() {
         float actual = bun.getPrice();
-        assertEquals("Ошибка в цене булочки", TEST_PRICE, actual, 0);
+        assertEquals("Ошибка в цене булочки", TEST_PRICE, actual, ZERO);
     }
 
 

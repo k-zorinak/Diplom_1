@@ -9,6 +9,7 @@ import org.mockito.Mock;
 
 @RunWith(Parameterized.class)
 public class BunParametersTest {
+    private static final int ZERO = 0;
     private static final String LONG_NAME = RandomStringUtils.randomAlphabetic(100);
     private static final String SPEC_NAME = RandomStringUtils.random(10, ' ', '.', '/', ',', '|', '!', '@', '$', '%');
     private final String name;
@@ -37,7 +38,7 @@ public class BunParametersTest {
     public void returnActualNameAndPrice() {
         bun = new Bun(name, price);
         Assert.assertEquals(name, bun.getName());
-        Assert.assertEquals(price, bun.getPrice(), 0);
+        Assert.assertEquals(price, bun.getPrice(), ZERO);
     }
 
 }
